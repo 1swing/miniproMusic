@@ -1,0 +1,117 @@
+/* pages/search/search.wxss */
+.searchContainer {
+  padding: 0 20rpx;
+}
+.placeholder{
+  font-size: 26rpx;
+}
+/* 头部区域样式设置 */
+.header {
+  display: flex;
+  height: 60rpx;
+  line-height: 60rpx;
+  padding: 10rpx 0;
+}
+
+.searchInput {
+  position: relative;
+  flex: 1;
+  border-radius: 30rpx;
+  background-color: rgba(237, 237, 237, .3);
+}
+.searchInput .clear{
+  position: absolute;
+  z-index: 10;
+  right: 30rpx;
+  top: 0;
+}
+.searchIcon {
+  position: absolute;
+  left: 15rpx;
+}
+
+.searchInput input {
+  margin-left: 50rpx;
+  height: 60rpx;
+}
+
+.cancle {
+  width: 100rpx;
+  text-align: center;
+}
+/* 搜索内容样式设置 */
+.searchContent{
+  /* color: #d43c33; */
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 24rpx;
+  border-bottom: 1rpx solid #d43c33;
+}
+.searchItem{
+  display: flex;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+.searchItem .content{
+  flex: 1;
+  margin-left: 20rpx;
+  border-bottom: 1rpx solid #eee;
+  font-size: 26rpx;
+}
+/* 搜索历史记录样式设置 */
+.historyContainer{
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20rpx 0;
+  line-height: 50rpx;
+}
+.historyContainer .title{
+  font-size: 28rpx;
+  height: 50rpx;
+}
+.historyContainer .historyItem{
+  height: 50rpx;
+  font-size: 26rpx;
+  background-color: #ededed;
+  margin-left: 20rpx;
+  padding: 0 30rpx;
+  border-radius: 20rpx;
+  margin-bottom: 20rpx;
+}
+.historyContainer .iconDel{
+  position: absolute;
+  right: 15rpx;
+  bottom: 10rpx;
+}
+/* 热搜榜样式设置 */
+.hotContainer {
+  width: 100%;
+}
+.hotContainer .hotHeader {
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 28rpx;
+  margin: auto;
+  border-bottom: 4rpx solid #eee;
+}
+
+.hotList {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.hotItem {
+  width: 50%;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 26rpx;
+}
+.hotItem .order{
+  margin:0 10rpx;
+}
+.hotItem .iconImg{
+  width: 30rpx;
+  height: 20rpx;
+  margin-left: 10rpx;
+}

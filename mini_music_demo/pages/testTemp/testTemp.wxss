@@ -1,0 +1,6 @@
+/* pages/testTemp/testTemp.wxss */
+@import '/template/myTemplate/myTemplate.wxss';
+.tempTile{
+  color: hotpink;
+  font-size: 40rpx;
+}
