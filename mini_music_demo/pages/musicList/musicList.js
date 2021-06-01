@@ -1,5 +1,4 @@
 // pages/musicListSquare/musicListSquare.js
-
 import request from "../../utils/request2";
 
 // 当前分类的tag名称
@@ -12,22 +11,14 @@ Page({
    * 页面的初始数据
    */
   data: {
-    // 当前显示的页面
-    showPage: 0,
-    // 头部标签信息
-    headTags: [],
-    // 当前选择的分类索引
-    categoryIndex: 0,
-    // 存放tag下的歌单
-    tagMusicList: [],
-    // 存放所有的tags标签数据
-    allTags: [],
-    // 点击allTag中的标签的详情数据
-    tagDetail: [],
-    // 当前标签详情的名称
-    tagName: "",
-    // 是否显示遮罩层
-    isMaskShow: false,
+    showPage: 0, // 当前显示的页面
+    headTags: [], // 头部标签信息
+    categoryIndex: 0,   // 当前选择的分类索引
+    tagMusicList: [], // 存放tag下的歌单
+    allTags: [],  // 存放所有的tags标签数据
+    tagDetail: [], // 点击allTag中的标签的详情数据
+    tagName: "",  // 当前标签详情的名称
+    isMaskShow: false, // 是否显示遮罩层
   },
 
   /**
@@ -54,13 +45,6 @@ Page({
     this.setData({
       headTags: tags,
       tagMusicList,
-    });
-  },
-
-  // 返回歌单广场
-  goBackSquare() {
-    this.setData({
-      showPage: 0,
     });
   },
 

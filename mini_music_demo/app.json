@@ -2,6 +2,7 @@
   "pages":[
     "pages/musicList/musicList",
     "pages/index/index",
+    "pages/toplist/toplist",
     "pages/recommendSong/recommendSong",
     "pages/test/test",
     "pages/search/search",

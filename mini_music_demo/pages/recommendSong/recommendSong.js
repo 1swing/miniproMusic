@@ -9,7 +9,7 @@ Page({
   data: {
     day:'',
     month:'',
-    recommendList:[],//推荐歌曲数组  
+    recommendList:[], //推荐歌曲数组  
     index:0,//初始化点击音乐的下标
   },
 

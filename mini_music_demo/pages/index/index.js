@@ -68,6 +68,12 @@ Page({
       url: '/pages/musicList/musicList',
     })
   },
+  // 跳转至排行榜页面
+  toTopList(){
+    wx.navigateTo({
+      url: '/pages/toplist/toplist',
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

@@ -17,7 +17,7 @@
       <text class="iconfont icon-gedan"></text>
       <text>歌单</text>
     </view>
-    <view class="navItem">
+    <view class="navItem" bindtap="toTopList">
       <text class="iconfont icon-paihangbang"></text>
       <text>排行榜</text>
     </view>
