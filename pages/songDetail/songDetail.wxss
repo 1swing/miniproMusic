@@ -1,0 +1,146 @@
+/* pages/songDetail/songDetail.wxss */
+.songDetailContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  padding-top: 15rpx;
+  background: rgba(0, 0, 0, 0.5);
+}
+.author {
+  margin-bottom: 15rpx;
+}
+/* 底座 */
+.circle {
+  position: relative;
+  z-index: 100;
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+/* 摇杆样式 */
+.needle {
+  position: relative;
+  z-index: 99;
+  top: -36rpx;
+  left: 60rpx;
+  width: 192rpx;
+  height: 274rpx;
+  /* 设置旋转中心点 */
+  transform-origin: 40rpx 0;
+  transform: rotate(-25deg);
+  /* 设置过渡效果 */
+  transition: transform 1.5s;
+}
+
+.needlePlay {
+  transform: rotate(0deg);
+}
+
+/* 磁盘 */
+.discContainer {
+  position: relative;
+  top: -170rpx;
+  width: 598rpx;
+  height: 598rpx;
+  /* border:1px solid red; */
+}
+
+.discAnimation {
+  animation: disc 8s linear infinite;
+  /* 规定动画延迟1.5s后在执行 */
+  animation-delay: 1.5s;
+}
+/*
+ @keyframes: 设置动画帧
+  1）from to
+      - 使用于简单的动画，只有起始帧和结束帧
+      - 北京 - 上海 ：直达
+  2） 百分比
+    -多用于复杂的动画，动画不止两帧 
+*/
+@keyframes disc {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.discContainer .disc {
+  width: 598rpx;
+  height: 598rpx;
+}
+
+.musicUrl {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  width: 370rpx;
+  height: 370rpx;
+  border-radius: 50%;
+}
+/* 进度条控制区域设置 */
+.progressControl {
+  position: absolute;
+  bottom: 200rpx;
+  width: 680rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  display: flex;
+}
+.progressBar {
+  position: relative;
+  width: 500rpx;
+  height: 4rpx;
+  margin: auto;
+  /* background-color: rgba(0, 0, 0, 0.4); */
+  background: white;
+}
+.audio-currentTime-pro {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 4rpx;
+  z-index: 1;
+  background-color: red;
+}
+.audio-circle {
+  position: absolute;
+  right: -12rpx;
+  top: -4rpx;
+  width: 14rpx;
+  height: 14rpx;
+  border-radius: 50%;
+  background-color: #fff;
+}
+.progressControl text {
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 26rpx;
+}
+/* 底部控制区域 */
+.musicControl {
+  position: absolute;
+  bottom: 40rpx;
+  left: 0;
+  display: flex;
+  width: 100%;
+}
+.musicControl text {
+  width: 20%;
+  color: #fff;
+  height: 120rpx;
+  font-size: 55rpx;
+  text-align: center;
+  line-height: 120rpx;
+}
+.musicControl text.big {
+  font-size: 80rpx;
+}

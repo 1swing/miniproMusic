@@ -1,0 +1,7 @@
+<template name="temp1">
+  <view class="title">
+   这是第一个模板文件
+  </view>
+  <view class="name">姓名：{{name}}</view>
+  <view class="age">年龄：{{age}}</view>
+</template>

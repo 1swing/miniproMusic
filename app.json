@@ -1,0 +1,48 @@
+{
+  "pages":[
+    "pages/musicList/musicList",
+    "pages/index/index",
+    "pages/toplist/toplist",
+    "pages/recommendSong/recommendSong",
+    "pages/test/test",
+    "pages/search/search",
+    "pages/songDetail/songDetail",
+    "pages/video/video",
+    "pages/profile/profile",
+    "pages/testTemp/testTemp",
+    "pages/login/login"
+  ],
+  "window":{
+    "navigationBarBackgroundColor": "#D43C33",
+    "navigationBarTitleText": "微音乐",
+    "navigationBarTextStyle":"white"
+  },
+  "tabBar": {
+    "color": "#333",
+    "selectedColor": "#d43c33",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text":"主页",
+        "iconPath": "/static/images/tabs/tab-home.png",
+        "selectedIconPath": "/static/images/tabs/tab-home-current.png"
+      },
+      {
+        "pagePath": "pages/video/video",
+        "text":"视频",
+        "iconPath": "/static/images/tabs/video.png",
+        "selectedIconPath": "/static/images/tabs/video-active.png"
+      },
+      {
+        "pagePath": "pages/profile/profile",
+        "text": "我的",
+        "iconPath": "/static/images/tabs/tab-my.png",
+        "selectedIconPath": "/static/images/tabs/tab-my-current.png"
+      }
+    ]
+  },
+  "requiredBackgroundModes":["audio"],
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

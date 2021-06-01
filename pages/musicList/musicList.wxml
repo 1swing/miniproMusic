@@ -1,0 +1,27 @@
+<!-- pages/musicList/musicList.wxml -->
+<view class="musicListContainer" style="display:{{showPage==0?'block':'none'}}">
+    <!-- 头部区域 -->
+    <view class="head">
+        <scroll-view class="tags" scroll-x scroll-into-view="t{{categoryIndex>3?categoryIndex-2:0}}" scroll-with-animation>
+            <view class="tagItem {{index==categoryIndex?'selected':''}}" wx:for="{{headTags}}" wx:key="id" id="t{{index}}" bindtap="changeTag">
+                {{item.name}}
+            </view>
+        </scroll-view>
+    </view>
+    <!-- 列表区域 -->
+    <view class="body">
+        <!-- 加载时阻止操作的透明遮罩层 -->
+        <view class="mask" style="display:{{isMaskShow?'block':'none'}}"></view>
+        <swiper class="categorySwiper" current="{{categoryIndex}}" bindchange="changeCurrent">
+            <swiper-item class="categorySwiperItem" wx:for="{{tagMusicList}}" wx:key="id">
+                <scroll-view class="musicListScroll" scroll-y enable-flex>
+                    <view class="listItem" wx:for="{{item}}" wx:key="id" wx:for-item="musicList" data-musiclistid="{{musicList.id}}">
+                        <image class="cover" src="{{musicList.coverImgUrl}}?param=300y300" lazy-load></image>
+                        <text class="title">{{musicList.name}}</text>
+                    </view>
+                </scroll-view>
+            </swiper-item>
+        </swiper>
+    </view>
+</view>
+<bottomControl></bottomControl>

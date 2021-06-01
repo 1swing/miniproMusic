@@ -1,0 +1,34 @@
+<!--pages/toplist/toplist.wxml-->
+<!-- 榜单推荐头部 -->
+<view class="headTitle">
+  榜单推荐
+</view>
+<view class="toplistRecommend">
+  <view class="recommendItem" wx:for="{{toplistRecommend}}" wx:key="id">
+    <view class="imageContainer">
+      <image src="{{item.coverImgUrl}}" ></image>
+      <text class="imgText">{{item.updateFrequency}}</text>
+    </view>
+    <view class="topName">{{item.name}}</view>
+  </view>
+</view>
+<!-- 官方榜头部 -->
+<view class="headTitle">
+  官方榜
+</view>
+<!-- 内容区 -->
+<scroll-view enable-flex scroll-y>
+  <view class="scrollItem" wx:for="{{toplist}}" wx:key="id">
+    <view class="leftContainer">
+      <image src="{{item.coverImgUrl}}" class="cover"></image>
+      <text class="imgText">{{item.updateFrequency}}</text>
+    </view>
+    <view class="contentContainer">
+      <view class="content" wx:for="{{item.tracks}}" wx:for-item="tracks">
+      <text>
+        {{index+1}}.{{tracks.first}}-{{tracks.second}}
+      </text>
+    </view>
+    </view>
+  </view>
+</scroll-view>

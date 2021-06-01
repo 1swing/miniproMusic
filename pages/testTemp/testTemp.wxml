@@ -1,0 +1,8 @@
+<!--pages/testTemp/testTemp.wxml-->
+<view class="tempContainer">
+  <view class="tempTile">自定义模板使用</view>
+  <!-- 引入模板 -->
+  <import src='/template/myTemplate/myTemplate.wxml'></import>
+  <!-- 使用模板 -->
+  <template is="temp1" data="{{...person}}"></template>
+</view>
